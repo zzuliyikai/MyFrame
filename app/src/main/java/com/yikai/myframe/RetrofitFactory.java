@@ -7,6 +7,7 @@ import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
 import com.yikai.myframe.utils.NetWorkUtil;
+import com.yikai.myframe.utils.RetryIntercepter;
 
 import java.io.File;
 import java.io.IOException;
@@ -82,6 +83,7 @@ public class RetrofitFactory {
                         .cookieJar(cookieJar)
                         .cache(cache)
                         .addInterceptor(cacheControlInterceptor)
+                        .addInterceptor(new RetryIntercepter())
                         .connectTimeout(10, TimeUnit.SECONDS)
                         .readTimeout(15, TimeUnit.SECONDS)
                         .writeTimeout(15, TimeUnit.SECONDS)

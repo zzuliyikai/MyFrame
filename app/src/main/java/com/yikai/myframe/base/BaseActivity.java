@@ -57,7 +57,7 @@ public class BaseActivity extends RxAppCompatActivity {
      * 初始化滑动返回
      */
     protected void initSlidable() {
-        int primary = getResources().getColor(R.color.colorAccent);
+        int primary = getResources().getColor(R.color.colorPrimary);
         int secondary = getResources().getColor(R.color.colorPrimary);
         SlidrConfig.Builder mBuilder = new SlidrConfig.Builder()
                 .primaryColor(primary)
