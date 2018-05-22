@@ -28,7 +28,6 @@
             app:elevation="16dp"
             app:itemIconTint="@drawable/nav_item_color_state"
             app:itemTextColor="@drawable/nav_item_color_state"
-            app:layout_behavior="com.meiji.toutiao.widget.behavior.BottomNavigationBehavior"
             app:menu="@menu/bottom_navigation_main"/>
 
     </android.support.design.widget.CoordinatorLayout>
