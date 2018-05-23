@@ -8,10 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.yikai.myframe.base.BaseActivity;
-import com.yikai.myframe.fragment.MeFragment;
-import com.yikai.myframe.fragment.NewFragment;
-import com.yikai.myframe.fragment.PhotoFragment;
-import com.yikai.myframe.fragment.VideoFragment;
+import com.yikai.myframe.fragment.mefragment.MeFragment;
+import com.yikai.myframe.fragment.newfragment.NewFragment;
+import com.yikai.myframe.fragment.photofragment.PhotoFragment;
+import com.yikai.myframe.fragment.videofragment.VideoFragment;
+import com.yikai.myframe.helper.BottomNavigationViewHelper;
 
 public class MainActivity extends BaseActivity {
 
@@ -49,17 +50,17 @@ public class MainActivity extends BaseActivity {
                 mToolbar.setTitle("新闻");
                 if (mNewFragment == null) {
                     mNewFragment = NewFragment.getInstance();
-                    ft.add(R.id.container,mNewFragment, NewFragment.class.getName());
-                }else {
+                    ft.add(R.id.container, mNewFragment, NewFragment.class.getName());
+                } else {
                     ft.show(mNewFragment);
                 }
-              break;
+                break;
             case FRAGMENT_PHOTO:
                 mToolbar.setTitle("图片");
                 if (mPhotoFragment == null) {
                     mPhotoFragment = PhotoFragment.getInstance();
-                    ft.add(R.id.container,mPhotoFragment, PhotoFragment.class.getName());
-                }else {
+                    ft.add(R.id.container, mPhotoFragment, PhotoFragment.class.getName());
+                } else {
                     ft.show(mPhotoFragment);
                 }
                 break;
@@ -67,8 +68,8 @@ public class MainActivity extends BaseActivity {
                 mToolbar.setTitle("视频");
                 if (mVideoFragment == null) {
                     mVideoFragment = VideoFragment.getInstance();
-                    ft.add(R.id.container,mVideoFragment, VideoFragment.class.getName());
-                }else {
+                    ft.add(R.id.container, mVideoFragment, VideoFragment.class.getName());
+                } else {
                     ft.show(mVideoFragment);
                 }
                 break;
@@ -76,8 +77,8 @@ public class MainActivity extends BaseActivity {
                 mToolbar.setTitle("我的");
                 if (mMeFragment == null) {
                     mMeFragment = MeFragment.getInstance();
-                    ft.add(R.id.container,mMeFragment, MeFragment.class.getName());
-                }else {
+                    ft.add(R.id.container, mMeFragment, MeFragment.class.getName());
+                } else {
                     ft.show(mMeFragment);
                 }
                 break;
@@ -87,16 +88,16 @@ public class MainActivity extends BaseActivity {
 
     private void hintFragment(FragmentTransaction ft) {
 
-        if (mNewFragment != null){
+        if (mNewFragment != null) {
             ft.hide(mNewFragment);
         }
-        if (mPhotoFragment != null){
+        if (mPhotoFragment != null) {
             ft.hide(mPhotoFragment);
         }
-        if (mVideoFragment != null){
+        if (mVideoFragment != null) {
             ft.hide(mVideoFragment);
         }
-        if (mMeFragment != null){
+        if (mMeFragment != null) {
             ft.hide(mMeFragment);
         }
     }
@@ -106,11 +107,11 @@ public class MainActivity extends BaseActivity {
         mToolbar.setTitle("晓楠头条");
         setSupportActionBar(mToolbar);
         bottom_navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        BottomNavigationViewHelper.disableShiftMode(bottom_navigation);
         bottom_navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.action_news:
                         showFragment(FRAGMENT_NEWS);
                         break;

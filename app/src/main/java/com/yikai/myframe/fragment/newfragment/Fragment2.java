@@ -1,4 +1,4 @@
-package com.yikai.myframe.fragment;
+package com.yikai.myframe.fragment.newfragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,25 +10,15 @@ import android.view.ViewGroup;
 import com.yikai.myframe.R;
 
 /**
- * Created by Administrator on 2018/5/22.
+ * Created by Administrator on 2018/5/23.
  */
 
-public class MeFragment extends Fragment {
-
-    private static MeFragment MmeFragment = null;
+public class Fragment2 extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.me_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment2, container, false);
         return view;
     }
-
-    public static MeFragment getInstance(){
-        if (MmeFragment == null){
-            MmeFragment = new MeFragment();
-        }
-        return MmeFragment;
-    }
-
 }

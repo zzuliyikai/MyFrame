@@ -1,4 +1,4 @@
-package com.yikai.myframe.fragment;
+package com.yikai.myframe.fragment.photofragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,23 +13,21 @@ import com.yikai.myframe.R;
  * Created by Administrator on 2018/5/22.
  */
 
-public class VideoFragment extends Fragment {
-    private static VideoFragment mVideoFragment = null;
+public class PhotoFragment extends Fragment {
 
+    private static PhotoFragment mPhotoFragment = null;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.video_fragment, container, false);
-
+        View view = inflater.inflate(R.layout.photo_fragment, container, false);
         return view;
     }
 
-    public static VideoFragment getInstance(){
-
-        if(mVideoFragment == null){
-            mVideoFragment = new VideoFragment();
+    public static PhotoFragment getInstance(){
+        if(mPhotoFragment == null){
+            mPhotoFragment = new PhotoFragment();
         }
-        return mVideoFragment;
+        return mPhotoFragment;
     }
+
 }
