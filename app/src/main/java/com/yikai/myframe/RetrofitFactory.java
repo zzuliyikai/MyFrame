@@ -24,7 +24,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by Administrator on 2018/5/17.
+ * Created by yikai on 2018/5/17.
  */
 
 public class RetrofitFactory {

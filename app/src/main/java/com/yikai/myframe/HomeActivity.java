@@ -1,8 +1,8 @@
 package com.yikai.myframe;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.text.TextPaint;
+import android.util.Log;
 
 import com.yikai.myframe.base.BaseActivity;
 
@@ -12,6 +12,13 @@ public class HomeActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        String ss = "1234567890123456";
+        TextPaint mTextPaint = new TextPaint();
+        int textWidth = (int) mTextPaint.measureText(ss);
+        Log.d("yikai123456 textWidth",textWidth+"");
+
+        Log.d("yikai123456",ss.length()+"");
     }
 
 

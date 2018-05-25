@@ -9,7 +9,7 @@ import com.yikai.myframe.utils.SettingUtil;
 import java.util.Calendar;
 
 /**
- * Created by Administrator on 2018/5/17.
+ * Created by yikai on 2018/5/17.
  */
 
 public class InitApp extends MultiDexApplication {
