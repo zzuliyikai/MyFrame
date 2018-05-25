@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.yikai.myframe.R;
 import com.yikai.myframe.adapter.FristAdapter;
+import com.yikai.myframe.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,33 +20,26 @@ import java.util.List;
  * Created by Administrator on 2018/5/23.
  */
 
-public class Fragment1 extends Fragment {
+public class Fragment1 extends BaseFragment {
 
-    private View view;
-    private RecyclerView rv;
-    private List<String> mLists;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment1, container, false);
-        initView();
-        initData();
-        return view;
-    }
-
-    private void initView() {
-        rv = view.findViewById(R.id.recycler_view);
-        rv.setLayoutManager(new LinearLayoutManager(getContext()));
+    public void setPresenter(Object presenter) {
 
     }
 
-    private void initData() {
-        mLists = new ArrayList<>();
-        for (int i = 0; i < 80; i++) {
-            mLists.add("我是第"+i+"块");
-        }
+    @Override
+    protected void initView(View view) {
 
-        rv.setAdapter(new FristAdapter(mLists));
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected int attachLayoutId() {
+        return 0;
     }
 }
