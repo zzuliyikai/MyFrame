@@ -20,26 +20,8 @@ import java.util.List;
  * Created by Administrator on 2018/5/23.
  */
 
-public class Fragment1 extends BaseFragment {
+public class Fragment1 extends Fragment {
 
 
-    @Override
-    public void setPresenter(Object presenter) {
 
-    }
-
-    @Override
-    protected void initView(View view) {
-
-    }
-
-    @Override
-    protected void initData() {
-
-    }
-
-    @Override
-    protected int attachLayoutId() {
-        return 0;
-    }
 }

@@ -104,7 +104,7 @@ public class MainActivity extends BaseActivity {
 
     private void initView() {
         mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setTitle("晓楠头条");
+        mToolbar.setTitle("头条");
         setSupportActionBar(mToolbar);
         bottom_navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottom_navigation);

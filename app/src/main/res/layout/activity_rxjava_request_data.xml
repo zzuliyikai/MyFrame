@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yikai.myframe.utils.RxjavaRequestDataActivity">
+
+
+    <Button
+        android:id="@+id/concat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="concat"
+        android:onClick="concat"
+        />
+
+    <Button
+        android:id="@+id/concat_eager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="concateager"
+        android:text="concateager(建议使用这个)"
+        app:layout_constraintTop_toBottomOf="@+id/concat" />
+
+    <Button
+        android:id="@+id/merge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/concat_eager"
+        android:text="merge"
+        android:onClick="merge"
+        />
+
+
+    <Button
+        android:id="@+id/publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/merge"
+        android:text="publish"
+        android:onClick="publish"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_data"
+        app:layout_constraintTop_toBottomOf="@+id/publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

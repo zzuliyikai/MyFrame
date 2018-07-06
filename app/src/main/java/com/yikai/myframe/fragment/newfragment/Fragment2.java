@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.yikai.myframe.R;
+import com.yikai.myframe.base.BaseFragment;
 
 /**
  * Created by Administrator on 2018/5/23.

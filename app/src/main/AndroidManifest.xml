@@ -22,21 +22,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            >
-
-        </activity>
-        <activity android:name=".HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar.Slidable"
-            >
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar.Slidable" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".utils.RxjavaDemoActivity"></activity>
+        <activity android:name=".utils.RxjavaDemo1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".utils.RxjavaRequestDataActivity"></activity>
     </application>
 
 </manifest>

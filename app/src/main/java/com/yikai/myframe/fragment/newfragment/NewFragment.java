@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.yikai.myframe.R;
 import com.yikai.myframe.adapter.PagerViewAdapter;
+import com.yikai.myframe.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;

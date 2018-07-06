@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.yikai.myframe.base.BaseFragment;
+
 import java.util.List;
 
 /**
@@ -12,7 +14,7 @@ import java.util.List;
 
 public class PagerViewAdapter extends FragmentStatePagerAdapter {
     private List<Fragment> mFragments;
-    public PagerViewAdapter(FragmentManager fm,List fragment) {
+    public PagerViewAdapter(FragmentManager fm,List<Fragment> fragment) {
         super(fm);
         this.mFragments = fragment;
     }
